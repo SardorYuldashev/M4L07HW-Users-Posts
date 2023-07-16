@@ -24,8 +24,10 @@ const resolvers = {
 
       return listPosts(contextValue.user);
     },
-    post: (_, args) => {
-      return showPost({ id: args.id });
+    post: (_, args, contextValue) => {
+      isLoggedIn(contextValue);
+
+      return showPost(args, contextValue.user);
     }
   },
   Mutation: {
