@@ -5,8 +5,8 @@
 export const up = function (knex) {
   return knex.schema.createTable('posts', (table) => {
     table.increments('id');
-    table.string('title').notNullable();
-    table.string('content').notNullable();
+    table.string('title', 500).notNullable();
+    table.string('content', 5000).notNullable();
     table.integer('user_id').references('id').inTable('users').onDelete('CASCADE');
     table.boolean('is_verified').defaultTo('false');
     table.integer('verified_by').references('id').inTable('users').onDelete('SET NULL');

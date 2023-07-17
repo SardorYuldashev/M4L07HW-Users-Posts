@@ -11,7 +11,7 @@ export const editPost = async ({ id, author_id, ...changes }) => {
 
   if (post.user_id !== author_id) {
     throw new BadRequestError("Faqat o'z maqolangizni tahrirlay olasiz");
-  }
+  };
 
   return (
     await db('posts')

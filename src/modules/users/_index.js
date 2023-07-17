@@ -116,6 +116,11 @@ const resolvers = {
       subscribe: () => pubsub.asyncIterator(['ADMIN_CREATED']),
     },
   },
+  User: {
+    full_name: (parent) => {
+      return `${parent.first_name} ${parent.last_name}`;
+    }
+  }
 };
 
 export default { typeDefs, resolvers };

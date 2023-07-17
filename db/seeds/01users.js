@@ -29,7 +29,7 @@ export const seed = async function(knex) {
       last_name: 'Arziyev',
       username: 'sherzod',
       password: bcryptjs.hashSync('123456', 10),
-      role: 'user'
+      role: 'admin'
     },
     {
       // id: 4,
@@ -41,11 +41,35 @@ export const seed = async function(knex) {
     },
     {
       // id: 5,
-      first_name: 'Obid',
-      last_name: "Xo'jayev",
-      username: 'obid',
+      first_name: "Bunyod",
+      last_name: "Jo'rayev",
+      username: 'bunyod',
       password: bcryptjs.hashSync('123456', 10),
       role: 'user'
-    }
+    },
+    {
+      // id: 6,
+      first_name: "Bekzod",
+      last_name: "To'ychiyev",
+      username: 'bekzod',
+      password: bcryptjs.hashSync('123456', 10),
+      role: 'user'
+    },
+    {
+      // id: 7,
+      first_name: "Akmal",
+      last_name: "Usmonov",
+      username: 'akmal',
+      password: bcryptjs.hashSync('123456', 10),
+      role: 'user'
+    },
+    {
+      // id: 8,
+      first_name: "Javohir",
+      last_name: "Umaraliyev",
+      username: 'javohir',
+      password: bcryptjs.hashSync('123456', 10),
+      role: 'user'
+    },
   ]);
 };

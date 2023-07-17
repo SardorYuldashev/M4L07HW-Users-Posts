@@ -16,5 +16,5 @@ app.use('/gql', serverMiddleware());
 
 const PORT = config.PORT || 8080;
 httpServer.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
+  console.log(`http://localhost:${PORT}/gql`);
 });
